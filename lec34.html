@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai our Code</title>
+</head>
+<body style="background-color: #212121; color: whitesmoke;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addlanguage(languagename){
+        const li = document.createElement('li');
+        li.innerHTML=`${languagename}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addlanguage("Java")
+    addlanguage("typescript")
+    //in the above method whenever a language is added it is added at the end  so the entire list has to be traversed
+    //which is not optimal in case of large data
+    //optimal approach
+    function addoptilanguage(languagename){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(languagename))
+        document.querySelector('.language').appendchild(li)
+    }
+    addlanguage("JAVA")
+    addlanguage("golang")
+
+    //editing (replacing )
+    const secondlang = document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML ="Mojo"
+    const newli = document.createElement('li')
+    newli.textContent="Mojo"
+    secondlang.replaceWith(newli)
+
+    ////////////second way
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>TypeScript</li>'
+    //////////////remove
+    const lastlang= document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
