@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.format{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+.form{
+    display: flex;
+}
+#submitguess{
+    height: 20px;
+    width: 60px;
+    cursor: pointer;
+
+}
