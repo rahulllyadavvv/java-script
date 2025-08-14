@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery with Google Link</title>
+  <style>
+    #imageList {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+    #imageList li {
+      text-align: center;
+    }
+    #imageList img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    #googleLink {
+      padding: 10px 15px;
+      background-color: #4285F4;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      line-height: 100px;
+    }
+    #googleLink:hover {
+      background-color: #357AE8;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="imageContainer">
+    <ul id="imageList">
+      <li><img id="img1" src="https://picsum.photos/id/237/200/300" alt="Sample Image 1"></li>
+      <li><img id="img2" src="https://images.unsplash.com/3/doctype-hi-res.jpg?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sample Image 2"></li>
+      <li><img id="img3" src="https://picsum.photos/id/1035/200/100" alt="Sample Image 3"></li>
+      <li><img id="img4" src="https://picsum.photos/id/1045/200/100" alt="Sample Image 4"></li>
+      <li><a id="googleLink" href="https://www.google.com" target="_blank">Go to Google</a></li>
+    </ul>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
