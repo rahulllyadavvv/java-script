@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind_practice</title>
+</head>
+<body>
+    <ul>
+        <li class="link" style="cursor: pointer; color: rgb(245, 134, 134);">Click Me </li>
+    </ul>
+    <script>
+        class userlink{
+            constructor(){
+                this.link = "https:www.google.com";
+                this.host = "localhost :3000";
+                this.name ="rahul_yadav"
+
+
+                document.querySelector(".link").addEventListener('click',this.onclick.bind(this));   
+
+                //if you dont use bind with your function you dont  access to class properties inside function.
+                // What bind does
+                // bind(this) simply tells JavaScript:
+                //inside  this function, always treat this as my class object so that it can access class properties.
+            }
+
+            onclick(){
+                console.log(this);
+                alert("You clicked this link");
+                console.log(this.link);
+                console.log(this.host);
+            }
+
+        }
+        const user =  new userlink();
+    </script>
+</body>
+
+</html>
